@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+<!--      <class name="com.commerce.tests.RegisterNewUserTest"/>
+		  <class name="com.commerce.tests.RegisterExistingUser_Negative"/> -->
+      <class name="com.commerce.tests.GuestVotesInHomePoll_Negative"/>      
+      <class name="com.commerce.tests.UserVotesInHomePoll"/>
+      <class name="com.commerce.tests.RegisterUserInvalidEmailParameter_Negative"/>
+      <class name="com.commerce.tests.GuestSearchForProductAddsToWishlist"/>
+      <class name="com.commerce.tests.LoginUserInvalidPassword_Negative"/>
+      
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

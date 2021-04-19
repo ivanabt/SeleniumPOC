@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/0/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Apr 16 13:22:15 CEST 2021</td>
+</tr>
+<tr><td>Total time:</td><td>62 seconds (62504 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.commerce.tests.GuestSearchesForProductAddsToWishlist.close()'><b>close</b><br>Test class: com.commerce.tests.GuestSearchesForProductAddsToWishlist</td>
+<td><div><pre>java.lang.Error: com.applitools.eyes.exceptions.DiffsFoundException: Test &apos;Validate chosen product&apos; of &apos;nopCommerce&apos; detected differences! See details at: https://eyes.applitools.com/app/batches/00000251783728654567/00000251783728643591?accountId=BMCj96H7aEak_Zb6nkTZAw~~
+	at com.applitools.eyes.visualgrid.services.VisualGridRunner.getAllTestResultsImpl(VisualGridRunner.java:529)
+	at com.applitools.eyes.EyesRunner.getAllTestResults(EyesRunner.java:35)
+	at com.applitools.eyes.EyesRunner.getAllTestResults(EyesRunner.java:24)
+	at com.commerce.basetests.EyesManager.eyesAwaitTestResults(EyesManager.java:104)
+	at com.commerce.tests.GuestSearchesForProductAddsToWishlist.close(GuestSearchesForProductAddsToWishlist.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
+	at org.testng.TestRunner.afterRun(TestRunner.java:847)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.applitools.eyes.exceptions.DiffsFoundException: Test &apos;Validate chosen product&apos; of &apos;nopCommerce&apos; detected differences! See details at: https://eyes.applitools.com/app/batches/00000251783728654567/00000251783728643591?accountId=BMCj96H7aEak_Zb6nkTZAw~~
+	at com.applitools.eyes.EyesBase.logSessionResultsAndThrowException(EyesBase.java:568)
+	at com.applitools.eyes.EyesBase.close(EyesBase.java:471)
+	at com.applitools.eyes.visualgrid.services.VisualGridTask.call(VisualGridTask.java:146)
+	at com.applitools.eyes.visualgrid.services.VisualGridTask.call(VisualGridTask.java:18)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre></div><a href='#' onClick='toggleBox("stack-trace964094970", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace964094970'><pre>java.lang.Error: com.applitools.eyes.exceptions.DiffsFoundException: Test &apos;Validate chosen product&apos; of &apos;nopCommerce&apos; detected differences! See details at: https://eyes.applitools.com/app/batches/00000251783728654567/00000251783728643591?accountId=BMCj96H7aEak_Zb6nkTZAw~~
+	at com.applitools.eyes.visualgrid.services.VisualGridRunner.getAllTestResultsImpl(VisualGridRunner.java:529)
+	at com.applitools.eyes.EyesRunner.getAllTestResults(EyesRunner.java:35)
+	at com.applitools.eyes.EyesRunner.getAllTestResults(EyesRunner.java:24)
+	at com.commerce.basetests.EyesManager.eyesAwaitTestResults(EyesManager.java:104)
+	at com.commerce.tests.GuestSearchesForProductAddsToWishlist.close(GuestSearchesForProductAddsToWishlist.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:61)
+	at org.testng.internal.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:366)
+	at org.testng.internal.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:320)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:617)
+	at org.testng.TestRunner.afterRun(TestRunner.java:847)
+	at org.testng.TestRunner.run(TestRunner.java:588)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+	at org.testng.TestNG.runSuites(TestNG.java:1069)
+	at org.testng.TestNG.run(TestNG.java:1037)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: com.applitools.eyes.exceptions.DiffsFoundException: Test &apos;Validate chosen product&apos; of &apos;nopCommerce&apos; detected differences! See details at: https://eyes.applitools.com/app/batches/00000251783728654567/00000251783728643591?accountId=BMCj96H7aEak_Zb6nkTZAw~~
+	at com.applitools.eyes.EyesBase.logSessionResultsAndThrowException(EyesBase.java:568)
+	at com.applitools.eyes.EyesBase.close(EyesBase.java:471)
+	at com.applitools.eyes.visualgrid.services.VisualGridTask.call(VisualGridTask.java:146)
+	at com.applitools.eyes.visualgrid.services.VisualGridTask.call(VisualGridTask.java:18)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:515)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
+	at java.base/java.lang.Thread.run(Thread.java:832)
+</pre></div></td>
+<td>38</td>
+<td>com.commerce.tests.GuestSearchesForProductAddsToWishlist@6ef888f6</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.commerce.tests.GuestSearchesForProductAddsToWishlist.guestSearchesForShoeProductAddsToWishlist()'><b>guestSearchesForShoeProductAddsToWishlist</b><br>Test class: com.commerce.tests.GuestSearchesForProductAddsToWishlist<br>Parameters: adidas, 9, Silver</td>
+<td></td>
+<td>16</td>
+<td>com.commerce.tests.GuestSearchesForProductAddsToWishlist@6ef888f6</td></tr>
+</table><p>
+</body>
+</html>
